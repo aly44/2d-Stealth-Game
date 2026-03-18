@@ -1,0 +1,27 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="MainMenuUI.uss" />
+
+    <!-- Main panel -->
+    <ui:VisualElement name="main-panel" class="fullscreen menu-bg">
+        <ui:VisualElement class="menu-card">
+            <ui:Label text="SHADOW" class="game-title" />
+            <ui:Label text="PROTOCOL" class="game-subtitle" />
+            <ui:VisualElement class="divider" />
+            <ui:Button name="play-button" text="PLAY" class="menu-button primary-button" />
+            <ui:Button name="levels-button" text="LEVEL SELECT" class="menu-button" />
+            <ui:Button name="quit-button" text="QUIT" class="menu-button quit-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+
+    <!-- Level select panel -->
+    <ui:VisualElement name="levels-panel" class="fullscreen menu-bg" style="display: none;">
+        <ui:VisualElement class="menu-card">
+            <ui:Label text="SELECT LEVEL" class="panel-title" />
+            <ui:VisualElement class="divider" />
+            <ui:Button name="level-1-button" text="LEVEL 1" class="menu-button" />
+            <ui:Button name="level-2-button" text="LEVEL 2" class="menu-button" />
+            <ui:Button name="level-3-button" text="LEVEL 3" class="menu-button" />
+            <ui:Button name="back-button" text="BACK" class="menu-button back-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
