@@ -1,0 +1,34 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/GameUI.uss?fileID=7433441132597879392&amp;guid=81713ac1e5119db4b93c2a51b7d6bb74&amp;type=3#GameUI" />
+
+    <!-- HUD -->
+    <ui:VisualElement name="hud" class="hud-root">
+        <!-- Distraction charges bottom-left -->
+        <ui:VisualElement name="charges-panel" class="charges-panel">
+            <ui:Label name="charges-label" text="DISTRACT" class="hud-label" />
+            <ui:VisualElement name="charges-dots" class="charges-dots" />
+        </ui:VisualElement>
+
+        <!-- Crouch indicator bottom-center -->
+        <ui:Label name="crouch-label" text="CROUCHING" class="crouch-label" style="display: none;" />
+
+        <!-- Alert warning top-center -->
+        <ui:Label name="alert-label" text="GUARD ALERT" class="alert-label" style="display: none;" />
+    </ui:VisualElement>
+
+    <!-- Game-over / win overlays -->
+    <ui:VisualElement name="detected-panel" class="fullscreen detected-bg" style="display: none;">
+        <ui:VisualElement class="card red-card">
+            <ui:Label text="DETECTED" class="title red-text" />
+            <ui:VisualElement class="divider red-divider" />
+            <ui:Label text="Restarting in 2 seconds..." class="subtitle" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="win-panel" class="fullscreen win-bg" style="display: none;">
+        <ui:VisualElement class="card green-card">
+            <ui:Label text="YOU WIN" class="title green-text" />
+            <ui:VisualElement class="divider green-divider" />
+            <ui:Label text="Press R for next level" class="subtitle" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
